@@ -1,3 +1,4 @@
+//This code is used to print my name using stars in pattern
 public class pattern {
     public static void main(String[] args){
         int n=10;
