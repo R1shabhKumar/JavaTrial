@@ -8,13 +8,13 @@ class Guesser{
 }
 class Player{
     int guessNum;
-    int guessingNumber(){
+    int guessingNumber(int n){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Player! kindly guess your number between 0 and 10");
+        System.out.println("Player "+n+" kindly guess your number between 0 and 10");
         guessNum = sc.nextInt();
         return guessNum;
+        }
     }
-}
 class Umpire{
     int numFromGuesser;
     int numFromPlayer1;
@@ -32,9 +32,9 @@ class Umpire{
         Player p1 = new Player();
         Player p2 = new Player();
         Player p3 = new Player();
-        numFromPlayer1 = p1.guessingNumber();
-        numFromPlayer2 = p2.guessingNumber();
-        numFromPlayer3 = p3.guessingNumber();
+        numFromPlayer1 = p1.guessingNumber(1);
+        numFromPlayer2 = p2.guessingNumber(2);
+        numFromPlayer3 = p3.guessingNumber(3);
     }
     void score(){
         if(score1==score2&&score1==score3&&score1!=0){
@@ -135,11 +135,15 @@ class Umpire{
 }
 public class Guessergame {
     public static void main(String[] args) {
+        int rounds;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of rounds you want to play");
+        rounds = sc.nextInt();
+        System.out.println();
+        System.out.println("Game started");
         Umpire u = new Umpire();
-        for(int i=0;i<2;i++){
-            System.out.println("Game started");
+        for(int i=0;i<rounds;i++){
             System.out.println("Round "+(i+1));
-            
             u.collectFromGuesser();
             u.collectFromPlayer();
             u.compare();
