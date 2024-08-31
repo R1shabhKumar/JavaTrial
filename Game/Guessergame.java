@@ -55,19 +55,19 @@ class Umpire{
             }else{
                 System.out.println("Player 2 won by scoring "+score2);
             }
-        }else if(score1==score2){
+        }else if(score1==score2&&score3!=0){
             if(score1>score3){
                 System.out.println("Player 1 and Player 3 won by scoring "+score1);
             }else{
                 System.out.println("Player 3 won by scoring "+score3);
             }
-        }else if(score1==score3){
+        }else if(score1==score3&&score2!=0){
             if(score1>score2){
                 System.out.println("Player 1 and Player 3 won by scoring "+score1);
             }else{
                 System.out.println("Player 2 won by scoring "+score2);
             }
-        }else if(score2==score3){
+        }else if(score2==score3&&score1!=0){
             if(score2>score1){
                 System.out.println("Player 2 and Player 3 won by scoring "+score2);
             }else{
@@ -85,7 +85,7 @@ class Umpire{
             }else{
                 System.out.println("Player 2 won by scoring "+score2);
             }
-        }else{
+        }else if(score1==score2&&score1==score3&&score3==0){
             System.out.println("Nobody won!! Everyone scored 0");
         }
     }
@@ -136,7 +136,7 @@ class Umpire{
 public class Guessergame {
     public static void main(String[] args) {
         Umpire u = new Umpire();
-        for(int i=0;i<3;i++){
+        for(int i=0;i<2;i++){
             System.out.println("Game started");
             System.out.println("Round "+(i+1));
             
