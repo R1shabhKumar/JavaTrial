@@ -1,7 +1,7 @@
 //This code is used to print my name using stars in pattern
 public class pattern {
     public static void main(String[] args){
-        int n=10;
+        int n=11;
         System.out.println();
         System.out.println();
         for(int i=0;i<n;i++){
@@ -55,7 +55,7 @@ public class pattern {
             System.out.print(" ");
             //for printing "B"
             for(int j=0;j<n;j++){
-                if(i==0||i==(n+1)/2||i==n-1||j==0||j==n-1){
+                if(i==0||i==(n+1)/2||i==n-1||j==0||j==n-1||j==1){
                 System.out.print("*");
                 }else{
                     System.out.print(" ");

@@ -208,10 +208,10 @@ class Calculator{
 
     }    
     void show(){
-        System.out.println("Balance 1: "+round1);
-        System.out.println("Balance 2: "+round2);
-        System.out.println("Balance 3: "+round3);
-        System.out.println("Balance 4: "+round4);
+        System.out.println("User1: "+round1);
+        System.out.println("User2: "+round2);
+        System.out.println("User3: "+round3);
+        System.out.println("User4: "+round4);
     }
     
 }

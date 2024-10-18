@@ -7,7 +7,7 @@ public class Pangram {
         String str= sc.nextLine();
         str = str.replace(" ", "");  //remove whitespaces
         str=str.toLowerCase();  //convert the string to lowercase
-        str=str.trim();  //remove whitespaces from both ends
+        
         System.out.println(str);
         char ch[] = str.toCharArray();  //store the string in a character array
         
