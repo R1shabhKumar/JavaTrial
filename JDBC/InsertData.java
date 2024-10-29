@@ -20,7 +20,7 @@ public class InsertData {
             PreparedStatement ps = connection.prepareStatement(sqlQuery);
 
             //set the values of the query
-            ps.setString(1, "Rohan");
+            ps.setString(1, "Rishabh");
             ps.setString(2,"Kumar");
             ps.setInt(3,20);
             ps.setDouble(4, 50000.0);
