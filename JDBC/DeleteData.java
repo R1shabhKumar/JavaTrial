@@ -1,13 +1,17 @@
 import java.sql.*;
+import java.util.Scanner;
 import java.io.*;
 public class DeleteData {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the name of the database: ");
+        String database = sc.nextLine();
         try{
             //Loading the driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             //Creating a connection
-            String url = "jdbc:mysql://localhost:3306/myDb";
+            String url = "jdbc:mysql://localhost:3306/"+database;
             String username = "root";
             String password = "R1shabh_s1ngh";
             Connection connection = DriverManager.getConnection(url, username, password);
