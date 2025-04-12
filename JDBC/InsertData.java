@@ -2,15 +2,8 @@ import java.sql.*;
 public class InsertData {
     public static void main(String[] args) {
         try{
-            //loading the driver
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
             //Creating a connection
-            String url ="jdbc:mysql://localhost:3306/myDb";
-            String username = "root";
-            String password = "R1shabh_s1ngh";
-
-            Connection connection = DriverManager.getConnection(url, username, password);
+            Connection connection = ConnectionProvider.getConnection();
             System.out.println("Connection created...");
 
             //SQL query for insering data into tables
@@ -20,14 +13,14 @@ public class InsertData {
             PreparedStatement ps = connection.prepareStatement(sqlQuery);
 
             //set the values of the query
-            ps.setString(1, "Rishabh");
-            ps.setString(2,"Kumar");
-            ps.setInt(3,20);
-            ps.setDouble(4, 50000.0);
+            ps.setString(1, "Ram");
+            ps.setString(2,"Singh");
+            ps.setInt(3,45);
+            ps.setDouble(4, 75000.0);
             
             //executing the query
             ps.executeUpdate();
-            System.out.println("Date inserted successfully...");
+            System.out.println("Data inserted successfully...");
 
 
             connection.close();

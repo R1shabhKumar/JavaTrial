@@ -225,6 +225,7 @@ public class SplitCalc{
         Calculator c = new Calculator();
         
         Scanner sc = new Scanner(System.in);
+        System.out.println("Is Calculator ko Rishabh Bhaiya ne banaya hai");
         System.out.println("Enter the no. of rounds: ");
         rounds=sc.nextInt();
         for(int i=0;i<rounds;i++){

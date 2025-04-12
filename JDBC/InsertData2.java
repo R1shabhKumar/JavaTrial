@@ -4,14 +4,8 @@ import java.io.*;
 public class InsertData2 {
     public static void main(String[] args) {
         try{
-        //Loading the driver
-        Class.forName("com.mysql.cj.jdbc.Driver");
-
         //Creating a connection
-        java.lang.String url = "jdbc:mysql://localhost:3306/myDb";
-        String username = "root";
-        String password = "R1shabh_s1ngh";
-        Connection connection = DriverManager.getConnection(url, username, password);
+        Connection connection = ConnectionProvider.getConnection();
         System.out.println("Connection created...");
 
         String sqlQuery = "INSERT INTO Employee2(FirstName,LastName,Age,Salary) VALUES (?,?,?,?)"; //SQL command
